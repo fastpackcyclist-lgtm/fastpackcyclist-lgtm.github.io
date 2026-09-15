@@ -1,0 +1,16 @@
+title: Akeim Joseph
+description: Applied AI, agent orchestration, and notes from building A.R.C.H.O.N. and PRISM.
+author: Akeim Joseph
+theme: minima
+markdown: kramdown
+plugins:
+  - jekyll-feed
+
+minima:
+  skin: dark
+  social_links:
+    - { platform: github, user_url: "https://github.com/fastpackcyclist-lgtm" }
+    - { platform: linkedin, user_url: "https://linkedin.com/in/akeim-joseph-994963276" }
+
+header_pages:
+  - about.md
