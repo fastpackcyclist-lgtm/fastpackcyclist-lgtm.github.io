@@ -1,8 +1,6 @@
 ---
 ---
 
-@import "minima";
-
 $bg-color: #0d1117;
 $text-color: #c9d1d9;
 $brand-color: #58a6ff;
@@ -11,48 +9,14 @@ $grey-color: #8b949e;
 $grey-color-dark: #c9d1d9;
 $table-text-align: left;
 
-body {
-  background-color: $bg-color;
-  color: $text-color;
-}
+@import "minima";
 
 .site-header {
   border-top: 5px solid #58a6ff;
-  border-bottom: 1px solid $grey-color-light;
-  background-color: $bg-color;
 }
 
 .site-title, .site-title:visited {
   color: $text-color;
-}
-
-.site-nav .page-link {
-  color: $text-color;
-}
-
-.site-footer {
-  border-top: 1px solid $grey-color-light;
-  background-color: $bg-color;
-}
-
-.footer-col-wrapper, .site-footer, .footer-heading, .contact-list, .social-media-list {
-  color: $grey-color;
-}
-
-a {
-  color: $brand-color;
-}
-
-a:visited {
-  color: $brand-color;
-}
-
-.post-content, .post-title, h1, h2, h3, h4, h5, h6 {
-  color: $text-color;
-}
-
-.post-meta {
-  color: $grey-color;
 }
 
 pre, code {
