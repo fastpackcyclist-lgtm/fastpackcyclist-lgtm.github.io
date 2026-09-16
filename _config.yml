@@ -10,6 +10,13 @@ minima:
   social_links:
     - { platform: github, user_url: "https://github.com/fastpackcyclist-lgtm" }
     - { platform: linkedin, user_url: "https://linkedin.com/in/akeim-joseph-994963276" }
+  nav_pages:
+    - about.md
+    - research/index.md
+    - projects/index.md
+    - journal/index.md
+    - notes/index.md
+    - cv/index.md
 
 collections:
   projects:
@@ -21,11 +28,3 @@ collections:
   notes:
     output: true
     permalink: /notes/:path/
-
-header_pages:
-  - about.md
-  - research/index.md
-  - projects/index.md
-  - journal/index.md
-  - notes/index.md
-  - cv/index.md
