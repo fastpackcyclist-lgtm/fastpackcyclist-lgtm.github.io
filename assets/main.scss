@@ -186,15 +186,31 @@ pre, code {
   margin-bottom: 4px;
 }
 
-// Below 1400px (13" MacBook Pro included — default 1280x800 logical
-// resolution) there's no room for a true side rail without overlapping
-// content, so Up Next / Recent Activity reflow into full-width, in-flow
-// card sections right under the nav. Only genuinely wide monitors get
-// the fixed side-rail treatment.
+// Fixed side rails only — sized to actually fit a 13" MacBook Pro's
+// default 1280x800 logical resolution (content wrapper is 800px
+// centered, leaving 240px margin each side at 1280px), not just wide
+// external monitors.
 .activity-rail, .up-next-rail {
-  max-width: 740px;
-  margin: 0 auto 32px;
-  padding: 20px 30px 0;
+  display: none;
+}
+
+@media screen and (min-width: 1180px) {
+  .activity-rail, .up-next-rail {
+    display: block;
+    position: fixed;
+    top: 140px;
+    width: 190px;
+    max-height: calc(100vh - 180px);
+    overflow-y: auto;
+  }
+
+  .activity-rail {
+    right: 16px;
+  }
+
+  .up-next-rail {
+    left: 16px;
+  }
 }
 
 .activity-rail-title {
@@ -210,17 +226,20 @@ pre, code {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 12px;
 }
 
 .activity-item, .up-next-item {
   display: flex;
   flex-direction: column;
-  padding: 12px;
-  border: 1px solid $grey-color-light;
-  border-radius: 8px;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid $grey-color-light;
+}
+
+.activity-item:last-child, .up-next-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 .activity-date {
@@ -255,43 +274,4 @@ pre, code {
   font-size: 12px;
   color: $grey-color;
   line-height: 1.5;
-}
-
-@media screen and (min-width: 1400px) {
-  .activity-rail, .up-next-rail {
-    position: fixed;
-    top: 140px;
-    width: 220px;
-    max-width: none;
-    max-height: calc(100vh - 180px);
-    overflow-y: auto;
-    margin: 0;
-    padding: 0;
-  }
-
-  .activity-rail {
-    right: 40px;
-  }
-
-  .up-next-rail {
-    left: 40px;
-  }
-
-  .activity-list, .up-next-list {
-    display: block;
-  }
-
-  .activity-item, .up-next-item {
-    padding: 0 0 12px 0;
-    margin-bottom: 12px;
-    border: none;
-    border-radius: 0;
-    border-bottom: 1px solid $grey-color-light;
-  }
-
-  .activity-item:last-child, .up-next-item:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
-    margin-bottom: 0;
-  }
 }
