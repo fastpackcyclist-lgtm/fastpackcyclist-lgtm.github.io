@@ -1,0 +1,15 @@
+# Real, currently-queued work only — no placeholder/filler items.
+# Update this when something here ships (move the matching line into
+# _data/activity.yml) or when the actual next item changes.
+- kind: "Research Paper"
+  title: "Closed-world tool grounding"
+  text: "Can an agentic system be made structurally incapable of claiming a capability it doesn't have? Case study: A.R.C.H.O.N.'s closed tool manifest."
+- kind: "Project"
+  title: "A.R.C.H.O.N."
+  text: "Continued development — multi-agent orchestration, self-critique gating, evaluation harness."
+- kind: "Project"
+  title: "PRISM"
+  text: "Continued development — organ classification system, permission-gated data layer."
+- kind: "Note"
+  title: "Tying it together"
+  text: "How the closed-world grounding question shows up concretely in both A.R.C.H.O.N. and PRISM."

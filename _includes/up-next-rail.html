@@ -1,0 +1,14 @@
+{%- if site.data.up_next %}
+<aside class="up-next-rail">
+  <h4 class="activity-rail-title">Up Next</h4>
+  <ul class="up-next-list">
+    {%- for entry in site.data.up_next %}
+    <li class="up-next-item">
+      <span class="up-next-kind">{{ entry.kind }}</span>
+      <span class="up-next-item-title">{{ entry.title }}</span>
+      <span class="up-next-text">{{ entry.text }}</span>
+    </li>
+    {%- endfor %}
+  </ul>
+</aside>
+{%- endif %}
