@@ -1,0 +1,13 @@
+{%- if site.data.activity %}
+<aside class="activity-rail">
+  <h4 class="activity-rail-title">Recent Activity</h4>
+  <ul class="activity-list">
+    {%- for entry in site.data.activity limit: 8 %}
+    <li class="activity-item">
+      <span class="activity-date">{{ entry.date | date: "%b %-d" }}</span>
+      <span class="activity-text">{{ entry.text }}</span>
+    </li>
+    {%- endfor %}
+  </ul>
+</aside>
+{%- endif %}

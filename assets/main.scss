@@ -185,3 +185,58 @@ pre, code {
   color: $grey-color;
   margin-bottom: 4px;
 }
+
+.activity-rail {
+  display: none;
+}
+
+@media screen and (min-width: 1400px) {
+  .activity-rail {
+    display: block;
+    position: fixed;
+    top: 140px;
+    right: 40px;
+    width: 220px;
+    max-height: calc(100vh - 180px);
+    overflow-y: auto;
+  }
+}
+
+.activity-rail-title {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: $grey-color;
+  margin-bottom: 14px;
+}
+
+.activity-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.activity-item {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid $grey-color-light;
+}
+
+.activity-item:last-child {
+  border-bottom: none;
+}
+
+.activity-date {
+  font-size: 11px;
+  color: $brand-color;
+  margin-bottom: 3px;
+}
+
+.activity-text {
+  font-size: 13px;
+  color: $text-color;
+  line-height: 1.5;
+}

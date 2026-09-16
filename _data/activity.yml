@@ -1,0 +1,18 @@
+# Most recent entry first. Add one line here whenever a real, meaningful
+# change lands on the site — this feed is meant to stay true to the repo.
+- date: 2026-09-16
+  text: "Added the Activity Rail — a real, dated log of site changes"
+- date: 2026-09-16
+  text: "Added NARVI meaning and founding date to the footer"
+- date: 2026-09-16
+  text: "Added Research and CV pages"
+- date: 2026-09-16
+  text: "Fixed header and nav rendering bugs"
+- date: 2026-09-16
+  text: "Added the Focus Areas grid and mission statement"
+- date: 2026-09-15
+  text: "Split the site into Projects, Journal, and Notes"
+- date: 2026-09-15
+  text: "Seeded Projects with A.R.C.H.O.N., PRISM, and SFT Command"
+- date: 2026-09-15
+  text: "Site went live at narviai.com"
