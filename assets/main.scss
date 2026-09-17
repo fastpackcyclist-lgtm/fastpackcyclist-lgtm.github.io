@@ -93,6 +93,17 @@ pre, code {
   padding: 30px 0;
 }
 
+.back-link {
+  display: inline-block;
+  font-size: 13px;
+  color: $grey-color;
+  margin-bottom: 16px;
+}
+
+.back-link:hover {
+  color: $brand-color;
+}
+
 .section-intro {
   color: $grey-color;
   font-size: 17px;
@@ -123,11 +134,18 @@ pre, code {
 }
 
 .focus-card {
+  display: block;
   padding: 20px;
   border-radius: 8px;
   border: 1px solid $grey-color-light;
   background: rgba(88, 166, 255, 0.03);
+  color: inherit;
+  text-decoration: none;
   transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.focus-card:visited {
+  color: inherit;
 }
 
 .focus-card:hover {

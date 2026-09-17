@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<div class="page-content-wrap">
+  <h1 class="page-heading">{{ page.title }}</h1>
+  {%- if page.intro %}<p class="section-intro">{{ page.intro }}</p>{% endif -%}
+
+  {{ content }}
+
+  <div class="focus-grid">
+    {%- assign all_items = site[page.collection] -%}
+    {%- for group in page.groups -%}
+    {%- assign count = all_items | where: page.group_field, group.key | size -%}
+    <a class="focus-card" href="{{ group.link | relative_url }}">
+      <h3>{{ group.label }}</h3>
+      <p>
+        {%- if count > 0 -%}
+          {{ count }} {% if count == 1 %}entry{% else %}entries{% endif %}
+        {%- else -%}
+          {{ group.empty_message | default: "Nothing here yet." }}
+        {%- endif -%}
+      </p>
+    </a>
+    {%- endfor -%}
+  </div>
+</div>

@@ -1,5 +1,5 @@
 ---
-layout: grouped-index
+layout: hub-index
 title: Research
 permalink: /research/
 collection: research
@@ -7,12 +7,15 @@ group_field: type
 groups:
   - key: paper
     label: Papers
+    link: /research/papers/
     empty_message: No papers published yet.
   - key: prototype
     label: Prototype & Build Ideas
+    link: /research/prototypes/
     empty_message: Nothing here yet.
   - key: test
     label: Tests
+    link: /research/tests/
     empty_message: Nothing here yet.
 ---
 
@@ -40,4 +43,4 @@ Most of the interesting failure modes in human-AI interaction aren't about model
 
 ---
 
-These are the standing questions. What follows below is where the actual work against them gets posted — papers, build ideas, and tests — as it happens.
+These are the standing questions. The actual work against them gets posted below — papers, build ideas, and tests, each in their own place.
