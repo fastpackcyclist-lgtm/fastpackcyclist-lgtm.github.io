@@ -4,6 +4,7 @@ title: Projects
 collection: projects
 permalink: /projects/
 group_field: category
+show_dates: false
 groups:
   - key: public-research
     label: Public Research

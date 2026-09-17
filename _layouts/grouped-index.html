@@ -16,7 +16,7 @@ layout: default
     <ul class="post-list">
       {%- for item in group_items -%}
       <li class="post-card">
-        {%- if item.date %}<span class="post-meta">{{ item.date | date: "%b %-d, %Y" }}</span>{% endif -%}
+        {%- if page.show_dates != false and item.date %}<span class="post-meta">{{ item.date | date: "%b %-d, %Y" }}</span>{% endif -%}
         <h3><a class="post-link" href="{{ item.url | relative_url }}">{{ item.title | escape }}</a></h3>
         {%- if item.status %}<span class="project-status">{{ item.status }}</span>{% endif -%}
         {%- if item.summary %}<p>{{ item.summary }}</p>{% endif -%}
