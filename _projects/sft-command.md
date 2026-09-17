@@ -1,6 +1,7 @@
 ---
 layout: project
 title: SFT Command LLC
+category: private-rd
 status: Wound down
 summary: A financial platform for independent RIAs — 200+ backend functions, wound down after eight months of outreach that never converted.
 ---

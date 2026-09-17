@@ -1,6 +1,7 @@
 ---
 layout: project
 title: PRISM
+category: public-research
 status: Public — research vehicle
 summary: The public half of the A.R.C.H.O.N. architecture, built in the open.
 ---

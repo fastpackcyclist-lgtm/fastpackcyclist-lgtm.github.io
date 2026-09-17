@@ -1,7 +1,19 @@
 ---
-layout: page
+layout: grouped-index
 title: Research
 permalink: /research/
+collection: research
+group_field: type
+groups:
+  - key: paper
+    label: Papers
+    empty_message: No papers published yet.
+  - key: prototype
+    label: Prototype & Build Ideas
+    empty_message: Nothing here yet.
+  - key: test
+    label: Tests
+    empty_message: Nothing here yet.
 ---
 
 I work on the applied side of a question that mostly gets asked in theory: how do you make an AI system trustworthy enough to actually act, not just answer? Everything below is a real line of investigation running through A.R.C.H.O.N. and PRISM, not a settled result — each one is stated as the question it actually is.
@@ -28,4 +40,4 @@ Most of the interesting failure modes in human-AI interaction aren't about model
 
 ---
 
-This page will grow as these questions get answered, revised, or replaced by better ones. Follow the [Projects](/projects/) and [Notes](/notes/) sections for the write-ups as they happen.
+These are the standing questions. What follows below is where the actual work against them gets posted — papers, build ideas, and tests — as it happens.

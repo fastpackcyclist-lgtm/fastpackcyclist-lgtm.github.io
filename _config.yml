@@ -16,6 +16,7 @@ minima:
     - projects/index.md
     - journal/index.md
     - notes/index.md
+    - news/index.md
     - cv/index.md
 
 collections:
@@ -28,3 +29,6 @@ collections:
   notes:
     output: true
     permalink: /notes/:path/
+  research:
+    output: true
+    permalink: /research/:path/

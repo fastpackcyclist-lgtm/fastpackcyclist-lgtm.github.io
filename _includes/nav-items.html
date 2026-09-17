@@ -2,7 +2,18 @@
   {%- for path in include.paths -%}
   {%- assign hyperpage = site.pages | where: "path", path | first -%}
   {%- if hyperpage.title %}
-  <a class="page-link" href="{{ hyperpage.url | relative_url }}">{{ hyperpage.title | escape }}</a>
+    {%- if hyperpage.groups and hyperpage.groups.size > 0 %}
+    <div class="nav-item-dropdown">
+      <a class="page-link" href="{{ hyperpage.url | relative_url }}">{{ hyperpage.title | escape }}</a>
+      <div class="nav-dropdown-menu">
+        {%- for group in hyperpage.groups %}
+        <a class="nav-dropdown-link" href="{{ hyperpage.url | relative_url }}#{{ group.key }}">{{ group.label }}</a>
+        {%- endfor %}
+      </div>
+    </div>
+    {%- else %}
+    <a class="page-link" href="{{ hyperpage.url | relative_url }}">{{ hyperpage.title | escape }}</a>
+    {%- endif -%}
   {%- endif -%}
   {%- endfor %}
 </div>

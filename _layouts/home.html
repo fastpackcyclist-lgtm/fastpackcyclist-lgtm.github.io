@@ -3,22 +3,17 @@ layout: default
 ---
 {{ content }}
 
-{%- if site.posts.size > 0 -%}
+{%- assign latest_items = site.journal | concat: site.notes | concat: site.research | sort: "date" | reverse -%}
 <div class="home">
-  <h2 class="post-list-heading">Writing</h2>
-  <ul class="post-list">
-    {%- for post in site.posts -%}
-    <li class="post-card">
-      <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-      <h3>
-        <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-      </h3>
-    </li>
-    {%- endfor -%}
-  </ul>
-</div>
-{%- else -%}
-<div class="home">
+  <h2 class="post-list-heading">Latest</h2>
+  {%- if latest_items.size > 0 -%}
+  {%- assign latest = latest_items.first -%}
+  <div class="post-card latest-post">
+    <span class="post-meta">{{ latest.date | date: "%b %-d, %Y" }}</span>
+    <h3><a class="post-link" href="{{ latest.url | relative_url }}">{{ latest.title | escape }}</a></h3>
+    {%- if latest.summary %}<p>{{ latest.summary }}</p>{% endif -%}
+  </div>
+  {%- else -%}
   <p class="empty-posts">First piece is coming soon.</p>
+  {%- endif -%}
 </div>
-{%- endif -%}

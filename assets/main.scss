@@ -275,3 +275,93 @@ pre, code {
   color: $grey-color;
   line-height: 1.5;
 }
+
+// Grouped index pages (Research, Projects) — typed sections sharing
+// the existing post-list/post-card pattern.
+.index-section {
+  margin-bottom: 40px;
+}
+
+.index-section-heading {
+  font-size: 20px;
+  font-weight: 500;
+  color: $text-color;
+  padding-bottom: 10px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid $grey-color-light;
+}
+
+.latest-post {
+  border-color: $grey-color-light;
+}
+
+.latest-post .post-meta {
+  font-size: 13px;
+  color: $brand-color;
+}
+
+// Dropdown nav — Research/Projects submenu links to page sections.
+// Desktop: hover-revealed panel below the parent link. Mobile
+// (site-nav's own breakpoint, matching minima's nav-trigger toggle
+// at 600px) renders the submenu as an always-visible indented list,
+// since there's no hover on touch.
+.nav-item-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-dropdown-menu {
+  display: none;
+}
+
+@media screen and (min-width: 601px) {
+  .nav-item-dropdown {
+    padding-bottom: 8px;
+    margin-bottom: -8px;
+  }
+
+  .nav-item-dropdown:hover .nav-dropdown-menu {
+    display: block;
+  }
+
+  .nav-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    background: $background-color;
+    border: 1px solid $grey-color-light;
+    border-radius: 6px;
+    padding: 6px 0;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    z-index: 10;
+  }
+
+  .nav-dropdown-link {
+    display: block;
+    padding: 8px 14px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: $text-color;
+    white-space: nowrap;
+  }
+
+  .nav-dropdown-link:hover {
+    color: $brand-color;
+    background: rgba(88, 166, 255, 0.06);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .nav-dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    padding-left: 16px;
+  }
+
+  .nav-dropdown-link {
+    color: $grey-color;
+    font-size: 15px;
+    line-height: 2;
+  }
+}
