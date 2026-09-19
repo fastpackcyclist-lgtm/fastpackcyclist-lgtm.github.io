@@ -7,9 +7,9 @@ plugins:
   - jekyll-feed
 
 # GoatCounter site code (the part before ".goatcounter.com" in your dashboard
-# URL). Leave blank to keep analytics off — head-custom.html only emits the
-# script tag once this is set.
-goatcounter_code: ""
+# URL). Leave blank to keep analytics off — _includes/head.html only emits
+# the script tag once this is set.
+goatcounter_code: "akeimjoseph"
 
 minima:
   social_links:
