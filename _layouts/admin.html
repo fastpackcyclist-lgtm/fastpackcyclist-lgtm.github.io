@@ -7,7 +7,7 @@ layout: default
 
   <div class="index-section">
     <h2 class="index-section-heading">Traffic</h2>
-    {%- if site.goatcounter_code %}
+    {%- if site.goatcounter_code and site.goatcounter_code != "" %}
     <p><a href="https://{{ site.goatcounter_code }}.goatcounter.com" target="_blank" rel="noopener">Open the GoatCounter dashboard →</a></p>
     {%- else %}
     <p class="empty-posts">GoatCounter isn't configured yet — set <code>goatcounter_code</code> in <code>_config.yml</code> once the account exists.</p>
