@@ -6,6 +6,11 @@ markdown: kramdown
 plugins:
   - jekyll-feed
 
+# GoatCounter site code (the part before ".goatcounter.com" in your dashboard
+# URL). Leave blank to keep analytics off — head-custom.html only emits the
+# script tag once this is set.
+goatcounter_code: ""
+
 minima:
   social_links:
     - { platform: github, user_url: "https://github.com/fastpackcyclist-lgtm" }

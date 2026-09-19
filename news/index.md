@@ -1,9 +1,9 @@
 ---
-layout: page
+layout: news-index
 title: News
 permalink: /news/
+live_channel_id: UCrM7B7SL_g1edFOnmj-SDKg
+live_channel_label: Bloomberg Technology
 ---
 
-AI news, tech news, and market news for the AI industry — curated and tracked in one place.
-
-<p class="empty-posts">Coming soon. This section needs more hands than one to run well, so it's waiting until there's a team behind it.</p>
+An automated feed, not a newsroom — headlines and papers pulled daily from Hacker News and arXiv, filtered for applied AI, agent orchestration, and AI safety, and rendered exactly as fetched. No AI summarizing or paraphrasing sits between the source and what's shown here, the same discipline as [PRISM's own News panel](/research/throttled-intelligence/).

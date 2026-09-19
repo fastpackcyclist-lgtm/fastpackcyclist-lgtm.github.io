@@ -4,6 +4,10 @@ layout: default
 <article class="page-content-wrap">
   <h1 class="page-heading">{{ page.title }}</h1>
   {%- if page.status %}<p class="project-status">{{ page.status }}</p>{% endif -%}
+  {%- assign words = content | number_of_words -%}
+  {%- assign read_mins = words | divided_by: 200 -%}
+  {%- if read_mins < 1 %}{% assign read_mins = 1 %}{% endif -%}
+  <p class="post-meta">{{ read_mins }} min read</p>
   <div class="page-content">
     {{ content }}
   </div>

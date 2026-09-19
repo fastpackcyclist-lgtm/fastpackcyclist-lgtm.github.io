@@ -12,8 +12,11 @@ layout: default
   {%- if items.size > 0 -%}
   <ul class="post-list">
     {%- for item in items -%}
+    {%- assign item_words = item.content | number_of_words -%}
+    {%- assign item_read_mins = item_words | divided_by: 200 -%}
+    {%- if item_read_mins < 1 %}{% assign item_read_mins = 1 %}{% endif -%}
     <li class="post-card">
-      {%- if page.show_dates != false and item.date %}<span class="post-meta">{{ item.date | date: "%b %-d, %Y" }}</span>{% endif -%}
+      {%- if page.show_dates != false and item.date %}<span class="post-meta">{{ item.date | date: "%b %-d, %Y" }} · {{ item_read_mins }} min read</span>{% endif -%}
       <h3><a class="post-link" href="{{ item.url | relative_url }}">{{ item.title | escape }}</a></h3>
       {%- if item.status %}<span class="project-status">{{ item.status }}</span>{% endif -%}
       {%- if item.summary %}<p>{{ item.summary }}</p>{% endif -%}

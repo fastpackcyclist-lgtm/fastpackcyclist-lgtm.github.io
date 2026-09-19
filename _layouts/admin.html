@@ -1,0 +1,66 @@
+---
+layout: default
+---
+<div class="page-content-wrap">
+  <h1 class="page-heading">{{ page.title }}</h1>
+  <p class="section-intro">Private workspace — not linked from navigation, excluded from search indexing via <code>robots.txt</code>. This is obscurity, not authentication: the URL itself isn't secret if it leaks, so nothing that would actually matter if seen by a stranger belongs on this page yet. Real auth is the next step if that ever changes.</p>
+
+  <div class="index-section">
+    <h2 class="index-section-heading">Traffic</h2>
+    {%- if site.goatcounter_code %}
+    <p><a href="https://{{ site.goatcounter_code }}.goatcounter.com" target="_blank" rel="noopener">Open the GoatCounter dashboard →</a></p>
+    {%- else %}
+    <p class="empty-posts">GoatCounter isn't configured yet — set <code>goatcounter_code</code> in <code>_config.yml</code> once the account exists.</p>
+    {%- endif %}
+  </div>
+
+  <div class="index-section">
+    <h2 class="index-section-heading">Content — {{ site.research.size }} research, {{ site.projects.size }} projects, {{ site.journal.size }} journal, {{ site.notes.size }} notes</h2>
+    {%- assign all_content = "" | split: "" -%}
+    {%- for item in site.research %}{% assign all_content = all_content | push: item %}{% endfor -%}
+    {%- for item in site.journal %}{% assign all_content = all_content | push: item %}{% endfor -%}
+    {%- for item in site.notes %}{% assign all_content = all_content | push: item %}{% endfor -%}
+    {%- assign all_content = all_content | sort: "date" | reverse -%}
+    {%- if all_content.size > 0 -%}
+    <table class="admin-stats-table">
+      <thead>
+        <tr><th>Title</th><th>Collection</th><th>Words</th><th>Read time</th><th>Date</th></tr>
+      </thead>
+      <tbody>
+        {%- for item in all_content -%}
+        {%- assign words = item.content | number_of_words -%}
+        {%- assign read_mins = words | divided_by: 200 -%}
+        {%- if read_mins < 1 %}{% assign read_mins = 1 %}{% endif -%}
+        <tr>
+          <td><a href="{{ item.url | relative_url }}">{{ item.title }}</a></td>
+          <td>{{ item.collection }}</td>
+          <td>{{ words }}</td>
+          <td>{{ read_mins }} min</td>
+          <td>{{ item.date | date: "%b %-d, %Y" | default: "—" }}</td>
+        </tr>
+        {%- endfor -%}
+      </tbody>
+    </table>
+    {%- else -%}
+    <p class="empty-posts">Nothing published yet in Journal or Notes.</p>
+    {%- endif -%}
+  </div>
+
+  <div class="index-section">
+    <h2 class="index-section-heading">News feed health</h2>
+    {%- if site.data.news %}
+    <p>{{ site.data.news.community.size }} community items, {{ site.data.news.research.size }} research items. Last fetched {{ site.data.news.generated_at | date: "%b %-d, %Y %H:%M UTC" }}.</p>
+    {%- else %}
+    <p class="empty-posts">News feed hasn't run yet.</p>
+    {%- endif %}
+  </div>
+
+  <div class="index-section">
+    <h2 class="index-section-heading">Comments &amp; reactions</h2>
+    <p class="empty-posts">Not wired up yet — planned via giscus (GitHub Discussions), not part of this pass.</p>
+  </div>
+
+  <div class="page-content">
+    {{ content }}
+  </div>
+</div>
