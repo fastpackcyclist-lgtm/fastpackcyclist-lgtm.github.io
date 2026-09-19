@@ -49,7 +49,7 @@ layout: default
   <div class="index-section">
     <h2 class="index-section-heading">News feed health</h2>
     {%- if site.data.news %}
-    <p>{{ site.data.news.community.size }} community items, {{ site.data.news.research.size }} research items. Last fetched {{ site.data.news.generated_at | date: "%b %-d, %Y %H:%M UTC" }}.</p>
+    <p>{{ site.data.news.tech.size }} tech items, {{ site.data.news.articles.size }} articles. Last fetched {{ site.data.news.generated_at | date: "%b %-d, %Y %H:%M UTC" }}.</p>
     {%- else %}
     <p class="empty-posts">News feed hasn't run yet.</p>
     {%- endif %}

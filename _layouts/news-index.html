@@ -8,21 +8,20 @@ layout: default
   {{ content }}
 
   {%- assign news = site.data.news -%}
-  {%- if page.live_channel_id %}
   <div class="index-section">
     <h2 class="index-section-heading">Live</h2>
-    <div class="embed-responsive">
-      <iframe src="https://www.youtube.com/embed/live_stream?channel={{ page.live_channel_id }}" title="{{ page.live_channel_label | default: 'Live channel' }}" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe>
+    <div id="live-ticker" class="live-ticker">
+      <span class="live-ticker-dot"></span>
+      <span id="live-ticker-text">Checking Hacker News…</span>
     </div>
-    <p class="embed-caption">{{ page.live_channel_label | default: "Live channel" }} — embedded from its own public YouTube stream.</p>
+    <p class="embed-caption">Right now on Hacker News — polled directly from Algolia's public HN API, client-side, no embed. No video partner's redistribution terms apply to a plain text link.</p>
   </div>
-  {%- endif -%}
 
   <div class="index-section">
-    <h2 class="index-section-heading">From the community</h2>
-    {%- if news.community.size > 0 -%}
+    <h2 class="index-section-heading">Tech News</h2>
+    {%- if news.tech.size > 0 -%}
     <ul class="post-list">
-      {%- for item in news.community -%}
+      {%- for item in news.tech -%}
       <li class="post-card">
         <h3><a class="post-link" href="{{ item.url }}" target="_blank" rel="noopener">{{ item.title }}</a></h3>
         <p class="feed-card-meta">{{ item.points }} points · <a href="{{ item.discussion }}" target="_blank" rel="noopener">{{ item.comments }} comments</a> · {{ item.date | date: "%b %-d, %Y" }}</p>
@@ -35,10 +34,10 @@ layout: default
   </div>
 
   <div class="index-section">
-    <h2 class="index-section-heading">From research</h2>
-    {%- if news.research.size > 0 -%}
+    <h2 class="index-section-heading">Articles</h2>
+    {%- if news.articles.size > 0 -%}
     <ul class="post-list">
-      {%- for item in news.research -%}
+      {%- for item in news.articles -%}
       <li class="post-card">
         <h3><a class="post-link" href="{{ item.url }}" target="_blank" rel="noopener">{{ item.title }}</a></h3>
         <p class="feed-card-meta">{{ item.authors }} · {{ item.date | date: "%b %-d, %Y" }}</p>
@@ -50,5 +49,34 @@ layout: default
     {%- endif -%}
   </div>
 
-  {%- if news.generated_at %}<p class="embed-caption">Feed last updated {{ news.generated_at | date: "%b %-d, %Y %H:%M UTC" }}.</p>{% endif -%}
+  {%- if news.generated_at %}<p class="embed-caption">Tech News and Articles last updated {{ news.generated_at | date: "%b %-d, %Y %H:%M UTC" }}.</p>{% endif -%}
 </div>
+
+<script>
+(function () {
+  var textEl = document.getElementById('live-ticker-text');
+  if (!textEl) return;
+
+  function poll() {
+    fetch('https://hn.algolia.com/api/v1/search?tags=front_page&hitsPerPage=1')
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        var hit = data.hits && data.hits[0];
+        if (!hit) { textEl.textContent = 'No current front-page story.'; return; }
+        textEl.innerHTML = '';
+        var link = document.createElement('a');
+        link.href = hit.url || ('https://news.ycombinator.com/item?id=' + hit.objectID);
+        link.target = '_blank';
+        link.rel = 'noopener';
+        link.textContent = hit.title + ' (' + hit.points + ' points)';
+        textEl.appendChild(link);
+      })
+      .catch(function () {
+        textEl.textContent = 'Live check failed — see Tech News below instead.';
+      });
+  }
+
+  poll();
+  setInterval(poll, 60000);
+})();
+</script>
