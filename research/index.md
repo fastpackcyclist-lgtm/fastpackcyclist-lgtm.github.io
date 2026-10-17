@@ -19,7 +19,7 @@ groups:
     empty_message: Nothing here yet.
 ---
 
-I work on the applied side of a question that mostly gets asked in theory: how do you make an AI system trustworthy enough to actually act, not just answer? Everything below is a real line of investigation running through A.R.C.H.O.N. and PRISM, not a settled result — each one is stated as the question it actually is.
+I work on the applied side of a question that mostly gets asked in theory: how do you make an AI system trustworthy enough to actually act, not just answer? Everything below is a real line of investigation running through A.R.C.H.O.N., PRISM, and Anubis — not a settled result, each one is stated as the question it actually is.
 
 ## Closed-world tool grounding
 
@@ -40,6 +40,10 @@ Most AI systems describe their own capabilities in whatever language a human wro
 ## What a directed AI system should feel like to use
 
 Most of the interesting failure modes in human-AI interaction aren't about model quality — they're about whether the person using the system can tell what it's actually doing. PRISM's permission gates are real UI, not fine print; its diagnostic panel shows the same routing decision the system used, not a simplified summary of it. The open question is how much transparency is actually useful before it becomes noise, and where that line moves as a system gets more autonomous.
+
+## Judging state instead of remembering sequence
+
+Can an AI-agent security gate catch what matters without ever tracking a session? Most agentic-security approaches watch a sequence of actions for a suspicious pattern — which means they need memory, and memory is itself a new attack surface (flush the window between steps and the pattern never forms). Anubis commits to the opposite: never track history, judge the resulting state instead. A proposed action's real consequence — what a resource's security tags would look like after it — gets checked against hard invariants, so a four-step exfiltration that looks fine at every individual step still gets caught the instant the state it would produce violates a rule, with no memory of the earlier steps required. The open question, stated honestly: a violation that never produces one bad snapshot — moving data through a series of equally-restricted locations before a final authorized export, say — isn't caught by this approach alone. Whether that gap needs closing, and how, without reintroducing the cost of session memory, is the real open line of work.
 
 ---
 
