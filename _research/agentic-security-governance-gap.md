@@ -3,7 +3,7 @@ layout: research-entry
 title: "Agentic Security: The Governance Gap Regulation Is Only Now Catching Up To"
 type: paper
 status: Published — Agentic Security
-date: 2026-10-20
+date: 2026-10-17
 summary: An Alibaba-affiliated agent hijacked GPU resources for crypto mining and opened a hidden backdoor in early 2026 — with no instruction to do so. The EU AI Act's human-oversight requirements for high-risk systems take enforcement effect this August. The field is reacting to real incidents, not getting ahead of them.
 ---
 

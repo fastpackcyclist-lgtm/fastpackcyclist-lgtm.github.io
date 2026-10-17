@@ -3,7 +3,7 @@ layout: research-entry
 title: "Applied AI Systems: Why Orchestration Reliability Is the Real Bottleneck"
 type: paper
 status: Published — Applied AI Systems
-date: 2026-10-20
+date: 2026-10-17
 summary: Tool-calling fails 3–15% of the time in production, often silently. The industry-wide gap between demo and deployment isn't model quality — it's orchestration reliability, and most teams are still solving it ad hoc.
 ---
 
