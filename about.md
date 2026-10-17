@@ -10,6 +10,6 @@ A.R.C.H.O.N. is the core of that work: a multi-agent orchestration system built 
 
 PRISM is the public half of that work — the same orchestration architecture, built in the open, with the advanced internals held back. Its GitHub is public, and most of what I write here traces back to what PRISM surfaces: what the architecture gets right, what breaks, and what I end up cutting.
 
-I also founded SFT Command LLC, a financial platform for independent RIAs, since wound down after eight months of direct outreach that never converted to a sale. That taught me something specific: I'm a technical builder, not a salesman — and this is where that skill actually gets used.
+I also founded SFT Command LLC, a financial platform for independent RIAs. Eight months of direct outreach to fiduciary buyers never converted to a sale, so I stopped pursuing that product — the entity itself didn't dissolve, though: it was renamed and became NARVI LLC, the parent company behind this site. That product's outcome taught me something specific: I'm a technical builder, not a salesman — and this is where that skill actually gets used.
 
 This is where I document the real process — architecture decisions, failures, and the applied-AI research behind both projects — as it happens, not after the fact.

@@ -371,6 +371,31 @@ pre, code {
 }
 
 @media screen and (max-width: 600px) {
+  // Real fix, 2026-10-17: the mobile nav rendered permanently open,
+  // overlapping the page -- GitHub Pages serves an older pinned minima
+  // gem whose CSS hides/reveals the nav panel via a `.trigger` wrapper
+  // class (`#nav-trigger:checked ~ .trigger`). This site's own
+  // header.html/nav-items.html never used that class -- it renders
+  // `.nav-items` instead -- so that selector never matched anything,
+  // and the nav content defaulted to visible with no toggle at all.
+  // Fixed here, self-contained, independent of whatever minima version
+  // GitHub Pages happens to pin: hide .nav-items by default on mobile,
+  // show it only when the real checkbox is actually checked.
+  .site-nav .nav-items {
+    display: none;
+    clear: both;
+  }
+
+  .site-nav #nav-trigger:checked ~ .nav-items {
+    display: block;
+    padding-bottom: 5px;
+  }
+
+  .site-nav .page-link {
+    display: block;
+    padding: 5px 10px;
+  }
+
   .nav-dropdown-menu {
     display: flex;
     flex-direction: column;

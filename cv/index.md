@@ -8,7 +8,7 @@ permalink: /cv/
 
 ## Summary
 
-Solo builder who designs, directs, and verifies AI-built systems rather than prompting them into existence. A.R.C.H.O.N. is a multi-agent orchestration system built around a biomimetic safety architecture — bounded, non-agentic "Nano-AI" processes coordinated by a supervising agent, hard permission gates on every state-changing action, and a deterministic evaluation harness that grades agent-loop behavior against fixed test cases plus an LLM-judged quality score. SFT Command was a financial intelligence platform with 200+ backend services and live fintech integrations (Plaid, Stripe, Yahoo Finance); after 8 months of self-funded outreach to fiduciary buyers produced zero pilots, I made the call to wind it down rather than keep building past a market that wasn't there. Nine years of direct customer-facing work — sales, service, high-throughput quality control — shapes how I scope and deliver technical systems: discovery first, architecture second, implementation directed and verified, not guessed at.
+Solo builder who designs, directs, and verifies AI-built systems rather than prompting them into existence. A.R.C.H.O.N. is a multi-agent orchestration system built around a biomimetic safety architecture — bounded, non-agentic "Nano-AI" processes coordinated by a supervising agent, hard permission gates on every state-changing action, and a deterministic evaluation harness that grades agent-loop behavior against fixed test cases plus an LLM-judged quality score. SFT Command was a financial intelligence platform with 200+ backend services and live fintech integrations (Plaid, Stripe, Yahoo Finance); after 8 months of self-funded outreach to fiduciary buyers produced zero pilots, I made the call to stop pursuing that product rather than keep building past a market that wasn't there. The LLC itself wasn't dissolved — it was renamed and became NARVI LLC, the entity behind this site. Nine years of direct customer-facing work — sales, service, high-throughput quality control — shapes how I scope and deliver technical systems: discovery first, architecture second, implementation directed and verified, not guessed at.
 
 ## Experience
 
@@ -26,11 +26,11 @@ A multi-agent orchestration system: a supervising agent coordinates bounded, sin
 *(Private repository — code available for review upon request)*
 
 **Founder — SFT Command LLC** (financial platform for independent RIAs)
-Building since August 2025 · LLC registered January 2026 · Augusta, GA (winding down)
+Building since August 2025 · LLC registered January 2026 · Augusta, GA (renamed to NARVI LLC)
 
 - Built a 200+ backend-function platform with live Plaid, Stripe, and Yahoo Finance integrations — 50+ database schemas, multi-tenant isolation, RBAC, compliance audit trails.
 - Architected five domain-scoped AI agents coordinated into a single compiled answer, plus predictive analytics (5-year net worth projection, cash flow forecasting, Monte Carlo simulation).
-- Eight months of direct outreach to fiduciary buyers produced zero pilots — a distribution and trust-network problem, not a technical one. Made the call to wind the entity down rather than keep funding a sales motion I'm not suited for; code retained as capability evidence.
+- Eight months of direct outreach to fiduciary buyers produced zero pilots — a distribution and trust-network problem, not a technical one. Made the call to stop pursuing that product rather than keep funding a sales motion I'm not suited for. The LLC itself wasn't dissolved — it was renamed and became NARVI LLC, the parent entity behind A.R.C.H.O.N., Anubis, and this site; code from SFT Command is retained as capability evidence.
 
 ## Customer-Facing & Operations Experience
 
