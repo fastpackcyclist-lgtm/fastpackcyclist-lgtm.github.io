@@ -10,26 +10,26 @@ layout: home
 </section>
 
 <section class="focus-grid">
-  <div class="focus-card">
+  <a class="focus-card" href="{{ '/research/agent-orchestration-reliability/' | relative_url }}">
     <h3>Applied AI Systems</h3>
     <p>Orchestration engines that make foundation models behave reliably: closed tool manifests, self-critique gating, deterministic evaluation harnesses that grade against fixed cases instead of vibes.</p>
     <span class="focus-tag">A.R.C.H.O.N.</span>
-  </div>
-  <div class="focus-card">
+  </a>
+  <a class="focus-card" href="{{ '/research/hallucination-is-architectural/' | relative_url }}">
     <h3>AI Safety Engineering</h3>
     <p>Anti-hallucination enforced by architecture, not prompted. A system that can't invent a capability it doesn't have, can't fabricate a coordinate it didn't compute, and refuses its own proposed actions under a bounded self-critique budget.</p>
     <span class="focus-tag">A.R.C.H.O.N. / AXF</span>
-  </div>
-  <div class="focus-card">
+  </a>
+  <a class="focus-card" href="{{ '/research/agentic-security-governance-gap/' | relative_url }}">
     <h3>Agentic Security</h3>
     <p>A deterministic compliance gate for AI agents — judging the real consequence of a proposed action against hard, auditable invariants, before it executes, with no session history required to catch what matters.</p>
     <span class="focus-tag">Anubis</span>
-  </div>
-  <div class="focus-card">
+  </a>
+  <a class="focus-card" href="{{ '/research/transparency-is-the-trust-variable/' | relative_url }}">
     <h3>Human-AI Interaction</h3>
     <p>How a directed AI system should actually feel to the person using it — permission gates as real UI, not fine print; state that's honestly shown, not simulated.</p>
     <span class="focus-tag">PRISM</span>
-  </div>
+  </a>
 </section>
 
 <section class="mission-statement">

@@ -64,19 +64,21 @@ Building since August 2025 · LLC registered January 2026 · Augusta, GA (rename
 ## Education
 
 **Southern New Hampshire University (SNHU)** — Online
-Associate of Science, Accounting — Expected Spring 2027
+Bachelor of Science, Computer Science — In progress (transferred from Accounting)
 
 **Abilene High School** — Abilene, TX
 High School Diploma with Criminal Justice Endorsement
 
 ## Technical Skills
 
-**AI & Agent Systems** — AI coding agent orchestration (Claude Code, Cursor, Base44), multi-model LLM routing, autonomous agent loops with bounded iteration limits, non-agentic narrow-task orchestration, deterministic evaluation harnesses, RAG pipelines, multi-agent task delegation with human-approval gating, voice AI.
+**AI & Agent Systems** — AI coding agent orchestration (Claude Code, Cursor, Base44), multi-model LLM routing, autonomous agent loops with bounded iteration limits, non-agentic narrow-task orchestration, deterministic evaluation harnesses, RAG pipelines, multi-agent task delegation with human-approval gating, voice AI, applied ML model training (PyTorch transformer classifiers, multi-head single- and multi-label architectures), reinforcement learning (PPO via Stable-Baselines3, custom Gym environments), real capacity-ceiling diagnostics separating learning gaps from architectural limits.
 
-**Languages** — JavaScript (ES6+) and TypeScript, SQL (Postgres/Supabase).
+**Languages** — JavaScript (ES6+) and TypeScript, Python, SQL (Postgres/Supabase).
 
-**Backend Engineering** — REST API design, microservices architecture (200+ deployed functions), webhook handling, event-driven systems, rate limiting, circuit breakers, audit logging, multi-tenant data isolation, RBAC, compliance ledger with hash-chain sealing.
+**Backend Engineering** — REST API design, microservices architecture (200+ deployed functions), webhook handling, event-driven systems, rate limiting, circuit breakers, audit logging, multi-tenant data isolation, RBAC, compliance ledger with hash-chain sealing, real crash-recovery and error-handling design (diagnosing a production connection-pool failure from its real stack trace and closing the actual gap, not just restarting the process).
 
 **Financial Technology** — Plaid, Stripe, real-time market data, trading signal generation, Monte Carlo simulations, net worth projection, cash flow forecasting.
 
-**Frontend Engineering** — React provider hierarchies, canvas-based visualization systems, real-time data visualization, motion-budget animation systems.
+**Frontend Engineering** — React provider hierarchies, canvas-based visualization systems, Three.js 3D rendering, real-time data visualization, motion-budget animation systems.
+
+**Systems & Site Reliability** — Jekyll/static-site architecture and content modeling (collections, layouts, templated data), GitHub Pages CI/CD, SCSS and CSS cascade debugging (diagnosing a real cross-version theme conflict down to the exact selector mismatch, not guessing at a fix), git branching and pull-request workflows across multiple repositories, local dev-server process management.
