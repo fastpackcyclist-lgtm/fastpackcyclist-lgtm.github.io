@@ -3,7 +3,7 @@ layout: research-entry
 title: "Human-AI Interaction: Transparency Is the Load-Bearing Trust Variable"
 type: paper
 status: Published — Human-AI Interaction
-date: 2026-10-20
+date: 2026-10-17
 summary: Recent workplace-AI research identifies agent transparency as the single strongest predictor of user preference — ahead of accuracy, speed, or capability. Most agentic UIs still treat it as an afterthought.
 ---
 

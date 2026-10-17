@@ -8,7 +8,23 @@ layout: default
 
   {{ content }}
 
+  {%- comment -%}
+    Real fix, 2026-10-17: site[page.collection] has no default
+    chronological order -- Jekyll falls back to alphabetical-by-
+    filename for any collection without an explicit sort_by in
+    _config.yml, which this site's research/journal/notes collections
+    don't set. Every one of these pages SHOWS a date, implying
+    chronology, while actually rendering in accidental filename order.
+    Sorted explicitly here, newest first (matches the site's own
+    "Latest" convention on the home page) -- guarded behind
+    show_dates so it never runs against a date-less collection
+    (e.g. Projects' private-rd/public-research, which sets
+    show_dates: false on purpose and has no date field to sort by).
+  {%- endcomment -%}
   {%- assign items = site[page.collection] | where: page.group_field, page.group_key -%}
+  {%- unless page.show_dates == false -%}
+    {%- assign items = items | sort: "date" | reverse -%}
+  {%- endunless -%}
   {%- if items.size > 0 -%}
   <ul class="post-list">
     {%- for item in items -%}
