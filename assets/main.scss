@@ -122,7 +122,10 @@ pre, code {
 
 .focus-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  // auto-fit so a 4th real focus area (Anubis, added 2026-10-17) wraps
+  // cleanly instead of sitting alone on a half-empty row -- not pinned
+  // to a fixed count, so the next one won't need this touched again.
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
   margin-bottom: 40px;
 }

@@ -8,11 +8,16 @@ permalink: /cv/
 
 ## Summary
 
-Solo builder who designs, directs, and verifies AI-built systems rather than prompting them into existence. A.R.C.H.O.N. is a multi-agent orchestration system built around a biomimetic safety architecture — bounded, non-agentic "Nano-AI" processes coordinated by a supervising agent, hard permission gates on every state-changing action, and a deterministic evaluation harness that grades agent-loop behavior against fixed test cases plus an LLM-judged quality score. SFT Command was a financial intelligence platform with 200+ backend services and live fintech integrations (Plaid, Stripe, Yahoo Finance); after 8 months of self-funded outreach to fiduciary buyers produced zero pilots, I made the call to stop pursuing that product rather than keep building past a market that wasn't there. The LLC itself wasn't dissolved — it was renamed and became NARVI LLC, the entity behind this site. Nine years of direct customer-facing work — sales, service, high-throughput quality control — shapes how I scope and deliver technical systems: discovery first, architecture second, implementation directed and verified, not guessed at.
+NARVI is an applied-AI company — agent orchestration, AI safety engineering, and agentic security — founded and directed by Akeim Joseph, who designs, directs, and verifies every system rather than prompting them into existence. A.R.C.H.O.N. is a multi-agent orchestration system built around a biomimetic safety architecture — bounded, non-agentic "Nano-AI" processes coordinated by a supervising agent, hard permission gates on every state-changing action, and a deterministic evaluation harness that grades agent-loop behavior against fixed test cases plus an LLM-judged quality score. Anubis is NARVI's agentic-security product — a stateless compliance gate judging AI-agent actions against hard, auditable invariants before they execute. SFT Command was NARVI's earlier financial intelligence platform — 200+ backend services, live fintech integrations (Plaid, Stripe, Yahoo Finance); after 8 months of self-funded outreach to fiduciary buyers produced zero pilots, that product was stopped rather than built past a market that wasn't there — the entity itself continued, renamed to NARVI LLC. Nine years of direct customer-facing work — sales, service, high-throughput quality control — shapes how Akeim scopes and delivers technical systems: discovery first, architecture second, implementation directed and verified, not guessed at. NARVI is now looking for a cofounder with real enterprise sales experience — the systems are real and working; closing deals is the one piece Akeim has proven, on his own dime, that he can't do alone.
 
 ## Experience
 
-**Creator & AI Product Engineer — A.R.C.H.O.N. (Independent R&D)**
+**Founder & Director — NARVI LLC**
+August 2025 – Present · Augusta, GA
+
+NARVI is the parent company behind A.R.C.H.O.N., Anubis, and PRISM — originally filed as SFT Command LLC, renamed once its first product (below) was stopped. Founded and directed solo; every architecture decision, every line of production code, and every trained model checkpoint across the portfolio is built and verified by Akeim directly.
+
+**Creator & AI Product Engineer — A.R.C.H.O.N. (NARVI, Independent R&D)**
 August 2025 – Present · Augusta, GA
 
 A multi-agent orchestration system: a supervising agent coordinates bounded, single-function "Nano-AI" processes under hard safety limits.
@@ -22,6 +27,17 @@ A multi-agent orchestration system: a supervising agent coordinates bounded, sin
 - **Observability & Permission Gating** — a live diagnostic panel exposing real-time node state and inter-agent messages, paired with a hard permission gate requiring explicit human sign-off before any autonomous code-writing or state-changing action.
 - **Memory & Knowledge Architecture** — a multi-layer memory system: working buffer, persistent memory (confidence-weighted RAG), and immutable historical memory.
 - **Security Architecture** — a 5-layer defense model with threat tracking, multi-code access verification, clearance levels, and authenticated encryption for node-to-node communication.
+
+*(Private repository — code available for review upon request)*
+
+**AI Product Engineer — Anubis (NARVI, Private R&D)**
+October 2026 – Present · Augusta, GA
+
+A domain-scoped AI classifier and deterministic compliance gate for agentic systems — separate from A.R.C.H.O.N. by design, built to wrap any agentic system, not just NARVI's own.
+
+- **Invariant gate** — judges a proposed AI-agent action by its real resulting state (resource sensitivity, origin, category before and after), not its stated intent; stress-tested directly against a concrete multi-step exfiltration scenario before the schema was finalized.
+- **Classifier core** — a purpose-built transformer (not a wrapped LLM) scoring CSA's Agentic AI Autonomy Levels (L0–L5) plus resource sensitivity, origin, and category.
+- **Real training discipline** — every label is human-reviewed before it counts as training data; synthetic data is used only to prove the pipeline/architecture at scale, and is always labeled and logged as such, never conflated with real reviewed capability.
 
 *(Private repository — code available for review upon request)*
 
