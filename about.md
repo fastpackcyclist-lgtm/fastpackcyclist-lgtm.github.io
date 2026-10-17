@@ -14,6 +14,6 @@ NARVI is an applied-AI company — agent orchestration, AI safety engineering, a
 
 NARVI also owns SFT Command LLC's history — a financial platform for independent RIAs. Eight months of direct outreach to fiduciary buyers never converted to a sale, so that product was stopped; the entity itself didn't dissolve, it was renamed and became NARVI LLC. That outcome taught something specific and durable: Akeim is a technical builder, not a salesperson — which is exactly why NARVI is now looking for a cofounder with real sales experience, not a second engineer.
 
-NARVI was built independently at first — out of real, honest fear that an unprotected idea gets copied before it ever reaches the market. That fear turned out to be the wrong trade: a year spent avoiding exposure is a year not spent building the distribution and trust a real company needs. NARVI isn't staying independent. It's being built to take real investment and grow.
+NARVI was built independently at first, while the architecture and the portfolio were being proven out on their own merits. That phase is over. NARVI is being built now to take real investment and grow.
 
 This site documents the real process — architecture decisions, failures, and the applied-AI research behind all of it — as it happens, not after the fact.
